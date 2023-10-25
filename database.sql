@@ -1,5 +1,5 @@
-CREATE USER 'tshwarelo'@'%' IDENTIFIED BY 'Ttmokoane7';
-GRANT ALL PRIVILEGES ON *.* TO 'tshwarelo'@'%' WITH GRANT OPTION;
+CREATE USER tshwarelo@localhost IDENTIFIED BY Ttmokoane7;
+GRANT ALL PRIVILEGES ON *.* TO tshwarelo@localhost WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 
 # creating data base named  "student records"
