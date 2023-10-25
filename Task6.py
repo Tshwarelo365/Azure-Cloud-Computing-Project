@@ -1,3 +1,5 @@
+#this is the installation of flask
+
 from flask import Flask, render_template
 from your_task_5_script import fetch_student_records  # Import your Task 5 function
 
@@ -12,6 +14,7 @@ def index():
 if __name__ == '__main__':
     app.run()
 
+#this is the the html that is suppused to be in index html file
 
 <!DOCTYPE html>
 <html>
