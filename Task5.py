@@ -1,6 +1,6 @@
 import mysql.connector
 
-def fetch_student_records():
+def fetchStudentRecords():
     # Define the database connection parameters
     db_config = {
         "host": "localhost",  # Your MySQL host
@@ -9,14 +9,14 @@ def fetch_student_records():
         "database": "student_records"
     }
 
-    # Establish a connection to the database
+    # connection to the database
     connection = mysql.connector.connect(**db_config)
 
     try:
-        # Create a cursor to execute SQL queries
+        # A cursor to execute SQL queries
         cursor = connection.cursor()
 
-        # Define the SQL query to fetch all records from the "students" table
+        # SQL query to fetch all records from the "students" table
         query = "SELECT * FROM students"
 
         # Execute the query
@@ -42,6 +42,6 @@ def fetch_student_records():
         connection.close()
 
 if __name__ == "__main__":
-    student_records = fetch_student_records()
+    student_records = fetchStudentRecords()
     for student in student_records:
         print(student)
