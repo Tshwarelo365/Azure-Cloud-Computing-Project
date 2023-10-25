@@ -1,5 +1,5 @@
 #!/bin/bash
-
+echo "HELLO WELCOME TO 221967575 MOKOANE T PRACTICAL LAB 1 "
 echo "Now executing Task 1 anfd Task 2"
 
 # Step 1: Delete existing configurations (if any)
