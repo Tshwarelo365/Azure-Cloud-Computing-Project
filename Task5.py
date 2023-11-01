@@ -5,8 +5,8 @@ def fetchStudentRecords():
     db_config = {
         "host": "localhost",  # Your MySQL host
         "user": "tshwarelo",
-        "password": "Ttmokoane7",
-        "database": "student_records"
+        "password": "Ttmokoane7?",
+        "database": "studentManagement"
     }
 
     # connection to the database
@@ -42,6 +42,6 @@ def fetchStudentRecords():
         connection.close()
 
 if __name__ == "__main__":
-    student_records = fetchStudentRecords()
-    for student in student_records:
+    studentManagement = fetchStudentRecords()
+    for student in studentManagement:
         print(student)
