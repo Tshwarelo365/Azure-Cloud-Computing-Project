@@ -1,9 +1,11 @@
 #!/bin/bash
 echo "HELLO WELCOME TO 221967575 MOKOANE T PRACTICAL LAB 1 "
-echo "Now executing Task 1 anfd Task 2"
+echo "Now executing webserver configurations"
 
 # Step 1: Delete existing configurations (if any)
-echo "Searching and Deleting any configuration"
+echo "Searching... and Deleting.. any configuration"
+
+sleep 2
 
 # Stop Nginx if it is running
 if systemctl is-active --quiet nginx; then
@@ -25,7 +27,11 @@ rm -f ~/html
 
 echo "Nginx and 'labs' directory have been removed."
 
+sleep 2
 
+echo "i am cheking iif Nginx is installed and start if not running"
+
+sleep 3
 
 # Step 2: Check if Nginx is installed and start it if not running
 if ! dpkg -l | grep -q "nginx"; then
@@ -44,7 +50,7 @@ sudo mkdir -p /var/www/html/labs
 sudo chown -R $USER:$USER /var/www/html/labs
 
 # Step 5: Create a symbolic link 'html' in the home directory
-ln -s /var/www/html/labs /~/html
+ln -s /var/www/html/labs ~/html
 
 # Step 6: Create an index.html file in the 'labs' directory
 cat <<EOF > /var/www/html/labs/index.html
@@ -69,4 +75,18 @@ EOF
 echo "Nginx setup and The webpage was created succesfuly created."
 echo "Task 1 and Task 2 has finished executing"
 
-#TASK 3 and 4
+sleep 3 
+
+echo "Now Deploying database"
+
+#dEPLOY MYSQL DATABASE
+
+apt install mysql-server
+
+#SECURITY configuration
+
+mysql_secure_installation
+
+#improve security
+
+mysql -u root -p
