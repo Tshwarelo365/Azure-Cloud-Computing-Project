@@ -57,14 +57,28 @@ cat <<EOF > /var/www/html/labs/index.html
 <!DOCTYPE html>
 <html>
 <head>
-    <title>STUDENT INFORMATION PAGE</title>
+    <title>Student Details</title>
 </head>
 <body>
-    <h1>STUDENT INFORMATION PAGE</h1>
-    <p>Initials:T M</p>
-    <p>Name: Tshwarelo</p>
-    <p>Student No: 221967575</p>
-    <p>Course: Computer Systems</p>
+    <h1>Student Details</h1>
+    <table>
+        <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Course</th>
+        </tr>
+        {% for student in student_records %}
+        <tr>
+            <td>{{ student.student_id }}</td>
+            <td>{{ student.name }}</td>
+            <td>{{ student.age }}</td>
+            <td>{{ student.gender }}</td>
+            <td>{{ student.course }}</td>
+        </tr>
+        {% endfor %}
+    </table>
 </body>
 </html>
 EOF
