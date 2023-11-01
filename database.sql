@@ -1,14 +1,14 @@
-CREATE USER tshwarelo@localhost IDENTIFIED BY Ttmokoane7;
+CREATE USER tshwarelo@localhost IDENTIFIED BY Ttmokoane7?;
 GRANT ALL PRIVILEGES ON *.* TO tshwarelo@localhost WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 
-# creating data base named  "student records"
+# creating data base named  "studentManagement"
 
-CREATE DATABASE student_records;
+CREATE DATABASE studentManagement;
 
 # switching to student records
 
-USE student_records;
+USE studentManagement;
 
 # creating a table 
 CREATE TABLE students (
