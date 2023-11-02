@@ -1,4 +1,9 @@
-CREATE USER tshwarelo@localhost IDENTIFIED BY Ttmokoane7?;
+SELECT @@sql_mode;
+
+SET @@sql_mode = '';
+
+
+CREATE USER tshwarelo@localhost IDENTIFIED BY 'Ttmokoane7?';
 GRANT ALL PRIVILEGES ON *.* TO tshwarelo@localhost WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 
@@ -24,7 +29,7 @@ INSERT INTO students (name, age, gender, course)
 VALUES
 ('Happy Taba', 20, 'Male', 'Computer Science'),
 ('Lucas Makua', 22, 'Female', 'Fashion'),
-('Karabo /malome', 19, 'Male', 'Financial Systems');
+('Karabo Malome', 19, 'Male', 'Financial Systems');
 
 # diplay
 
