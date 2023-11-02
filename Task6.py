@@ -1,13 +1,13 @@
 #this is the installation of flask
 
 from flask import Flask, render_template
-from your_task_5_script import fetch_student_records  # Import your Task 5 function
+from five import fetch_student_records 
 
 app = Flask(__name)
 
 @app.route('/')
 def index():
-    student_records = fetch_student_records()  # Call your Task 5 function
+    student_records = fetch_student_records() n
 
     return render_template('index.html', student_records=student_records)
 
