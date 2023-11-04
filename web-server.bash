@@ -14,9 +14,9 @@ fi
 
 # Uninstall Nginx
 if dpkg -l | grep -q "nginx"; then
-    sudo apt-get remove --purge nginx nginx-common nginx-full -y
-    sudo apt-get autoremove -y
-    sudo apt-get clean
+    apt-get remove --purge nginx nginx-common nginx-full -y
+    apt-get autoremove -y
+    apt-get clean
 fi
 
 # Delete the 'labs' directory
@@ -35,8 +35,8 @@ sleep 3
 
 # Step 2: Check if Nginx is installed and start it if not running
 if ! dpkg -l | grep -q "nginx"; then
-    sudo apt-get update
-    sudo apt-get install nginx -y
+    sapt-get update
+    apt-get install nginx -y
 fi
 
 if ! systemctl is-active --quiet nginx; then
@@ -44,10 +44,10 @@ if ! systemctl is-active --quiet nginx; then
 fi
 
 # Step 3: Create the 'labs' directory
-sudo mkdir -p /var/www/html/labs
+mkdir -p /var/www/html/labs
 
 # Step 4: Change ownership of the 'labs' directory to the current user
-sudo chown -R $USER:$USER /var/www/html/labs
+chown -R $USER:$USER /var/www/html/labs
 
 # Step 5: Create a symbolic link 'html' in the home directory
 ln -s /var/www/html/labs ~/html
